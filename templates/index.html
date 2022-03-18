@@ -7,14 +7,14 @@
   <title>Todos List</title>
 </head>
 <body>
-  {% for i in range(20) %}   
-    <h1>Título</h1>
-    <h2>Loop: {{i}}</h2>
+  {% for intem in todos %}
   
-    {% if i == 3 %}
-      <h3> I = 3</h3>
+    {% if item.complete == False %}
+      <p>{{ item.name }}</p>
+    {% else %}
+      <p><s>{{ item.name }}  </s></p>
     {% endif %}
   
-  {% endfor %}
+  {{% endfor %}}
 </body>
 </html>
